@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { RootState } from '../../store';
+import type { RootState } from '../../store';
 import * as api from './api';
 
 function Authorization():JSX.Element {
@@ -13,7 +14,7 @@ function Authorization():JSX.Element {
     const navigate = useNavigate();
     const { user, message } = useSelector((store:RootState) => store.userReducer);
 
-  if ('id' in user) {
+  if (user) {
      navigate('/');
   }
     const handleLog = (e:React.FormEvent<HTMLFormElement>) :void => {
@@ -29,7 +30,7 @@ function Authorization():JSX.Element {
         <input placeholder="email" className="input_form" name="email" onChange={(e) => setEmail(e.target.value)} value={email} />
         </div>
         <div className="input-field">
-        <input placeholder="password" className="input_form" name="password" onChange={(e) => setPassword(e.target.value)} value={password} />
+        <input placeholder="password" className="input_form" name="password" type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
         </div>
 
 

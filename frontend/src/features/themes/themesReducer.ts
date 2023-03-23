@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/default-param-last */
+
 import type State from './types/State'
 import type Action from './types/Action';
 
