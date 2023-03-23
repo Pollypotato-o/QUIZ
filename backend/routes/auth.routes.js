@@ -2,7 +2,7 @@ const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../db/models');
 
-router.post('/sign-in', async (req, res) => {
+router.post('/sign_in', async (req, res) => {
   try {
     const { email, password } = req.body;
     if (email && password) {
@@ -26,7 +26,7 @@ router.post('/sign-in', async (req, res) => {
   }
 });
 
-router.post('/sign-up', async (req, res) => {
+router.post('/sign_up', async (req, res) => {
   try {
     const {
       email, name, password, password2
@@ -60,6 +60,19 @@ router.post('/sign-up', async (req, res) => {
     res.json(message);
   }
 });
+
+router.post('/logout', (req, res) => {
+  res.locals.user = null;
+  // eslint-disable-next-line consistent-return
+  req.session.destroy((error) => {
+    if (error) {
+      return res.status(500).json({ message: 'Ошибка при удалении сессии' });
+    }
+    res.clearCookie('user_sid');
+    res.json({ success: true });
+  });
+});
+
 router.get('/verification', async (req, res) => {
   const userId = req.session.userid;
   if (userId) {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { RootState } from '../../store';
-// import * as api from './api';
+import * as api from './api';
 
 function Registration():JSX.Element {
 
@@ -38,7 +38,7 @@ function Registration():JSX.Element {
         <div className="input-field">
         <input placeholder="repeat password" className="input_form" name="password2" onChange={(e) => setPassword2(e.target.value)} value={password2} />
         </div>
-        <button type="submit" className="button_auth">Зарегистрироваться<i className="material-icons">person_add</i></button>
+        <button type="submit" className="button_auth">Зарегистрироваться</button>
     </form>
     {message.length > 0 && <h1>{message}</h1>}
     </div>
