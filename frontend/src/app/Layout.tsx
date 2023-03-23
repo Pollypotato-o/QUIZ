@@ -12,7 +12,7 @@ import type { RootState } from '../store';
 
 
 function Layout(): JSX.Element {
-  const score = useSelector((state: RootState) => state.themes.score);
+  const score = useSelector((state: RootState) => state.themesReducer.score);
   // const user = useSelector((state: RootState) => state.login.user);
   const user = {
     name: 'vasya'
