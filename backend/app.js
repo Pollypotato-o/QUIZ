@@ -4,7 +4,7 @@ const config = require('./config/serverConfig');
 
 // роутеры
 const themesRouter = require('./routes/themes.routes');
-const loginRouter = require('./routes/login.routes');
+const loginRouter = require('./routes/auth.routes');
 const usersRouter = require('./routes/users.routes')
 
 const app = express(); 

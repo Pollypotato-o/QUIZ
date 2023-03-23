@@ -4,7 +4,7 @@
 import { combineReducers, createStore } from "redux";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import themesReducer from './features/themes/themesReducer';
-import userReducer from './features/auth/reducer';
+import userReducer from './features/auth/reducer'
 
 const store = createStore(
     combineReducers({
