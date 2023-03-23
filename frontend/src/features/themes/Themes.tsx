@@ -11,9 +11,9 @@ import type Question from './types/Question';
 // import * as pointsApi from '../static/apiStatic';
 
 function Themes(): JSX.Element {
-  const themes = useSelector((state: RootState) => state.themes.themesList);
+  const themes = useSelector((state: RootState) => state.themesReducer.themesList);
 //   const points = useSelector((state: RootState) => state.themes.score);
-//     const user = useSelector((state: RootState) => state.login.user);
+    const user = useSelector((state: RootState) => state.userReducer.user);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();

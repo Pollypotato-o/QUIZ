@@ -8,15 +8,13 @@ import Button from '@mui/material/Button';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../store';
-// import * as api from '../features/login/loginApi'
+import * as api from '../features/auth/api';
 
 
 function Layout(): JSX.Element {
-  const score = useSelector((state: RootState) => state.themes.score);
-  // const user = useSelector((state: RootState) => state.login.user);
-  const user = {
-    name: 'vasya'
-  }
+  const score = useSelector((state: RootState) => state.themesReducer.score);
+  const user = useSelector((state: RootState) => state.userReducer.user);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -31,10 +29,10 @@ function Layout(): JSX.Element {
 
 
   const handlerLogout = (): void => {
-    // api.logout().then(() => {
-    //   dispatch(logoutSuccess());
-    //   navigate('/')
-    // })
+    api.logout().then((data) => {
+      dispatch({ type: 'LOGOUT', payload: data });
+      navigate('/')
+    })
   };
 
 const handlerRegistration = (): void => {
@@ -53,10 +51,13 @@ const handlerRegistration = (): void => {
               <Link style={{ color: 'white', fontSize: 50, textShadow: '3px 3px 3px gray', textDecorationLine: 'none', letterSpacing: '5px',  }} to="/">
                 Quiz
               </Link>
-
+              {user ? 
               <span style={{ marginLeft: '50px' }}>
-                {user && `Привет, ${user.name.replace(user.name[0], user.name[0].toUpperCase())}`}
+                Привет, {user.name}
               </span>
+              :
+              null
+              }
             </Typography>
 
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: 24, fontFamily: 'Szlichta', fontWeight: 'bold', }}>

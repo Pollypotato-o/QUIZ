@@ -1,6 +1,6 @@
 export type User = {
     id?:number;
-    name?:string;
+    name:string;
     email:string;
     password?:string;
     password2?:string;
@@ -10,6 +10,6 @@ export type Message = {
 };
 
 export type State = {
-    user: {} | User;
-    message:string;
+    user: User | undefined;
+    message: string;
 };

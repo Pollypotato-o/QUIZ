@@ -9,9 +9,8 @@ import userReducer from './features/auth/reducer'
 const store = createStore(
     combineReducers({
     // login: loginReducer,
-    themes: themesReducer,
-    // static: reducerStatic,
-    userReducer
+    themesReducer,
+    userReducer,
     }),
     composeWithDevTools(),
 );
