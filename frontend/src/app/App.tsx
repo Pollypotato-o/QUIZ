@@ -4,11 +4,10 @@ import { Route, Router, Routes } from 'react-router-dom';
 import Authorization from '../features/auth/Authorization';
 import Registration from '../features/auth/Registration';
 import Themes from '../features/themes/Themes';
-
-import './App.css';
+import Layout from './Layout';
 import Page404 from './Page404';
 
-function App() {
+function App():JSX.Element {
   return (
 
     <Routes>
