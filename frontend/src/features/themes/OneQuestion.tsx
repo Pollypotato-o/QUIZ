@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import type Action from './types/Action';
 import type Question from './types/Question';
+import ChildModal from './SecondModal';
+
+
+
 
 export default function OneQuestionView({
   question,
@@ -120,23 +124,28 @@ export default function OneQuestionView({
               }}
             >
               {question.question}
+              {/* <img src='{question.question_pic}' alt='x'/> */}
+                 <img src={`${question.question_pic}`} alt=''/>
             </Typography>
             {answerShow ? (
-              <Typography
-                id="modal-modal-description"
-                sx={{
-                  mt: 2,
-                  fontSize: 30,
-                  // fontFamily: 'Szlichta',
-                  color: '#37474f',
-                }}
-              >
-                {answer}
-              </Typography>
+              // <Typography
+              //   id="modal-modal-description"
+              //   sx={{
+              //     mt: 2,
+              //     fontSize: 30,
+              //     // fontFamily: 'Szlichta',
+              //     color: '#37474f',
+              //   }}
+              // >
+              //   {answer}
+              // </Typography>
+              <div>x</div>
+
             ) : (
               <form onSubmit={handlerAnswer}>
                 <input value={inputText} onChange={handleInputChange} />
-                <Button
+                <ChildModal  answer={question} />
+                {/* <Button
                   type="submit"
                   sx={{
                     mt: 2,
@@ -150,9 +159,10 @@ export default function OneQuestionView({
                   }}
                 >
                   Узнать ответ
-                </Button>
+                </Button> */}
               </form>
             )}
+             
           </Box>
         </Modal>
       </div>
