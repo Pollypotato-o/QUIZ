@@ -1,0 +1,9 @@
+*{
+    font-family: "bodoni";
+}
+
+@font-face {
+    font-family: "bodoni";
+    src: url('../../public/fonts/bodoni.ttf') format('ttf'),
+      url('../../public/fonts/bodoni.woff') format('woff');
+  }
