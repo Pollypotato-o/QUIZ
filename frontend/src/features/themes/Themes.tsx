@@ -120,7 +120,7 @@ function Themes(): JSX.Element {
           sx={{backgroundColor: 'transparent'  ,fontSize: '60px', color: '#37474f' }}
         >
           {' '}
-          Войдите или зарегистрируйтесь!
+          Оставь надежду всяк сюда входящий! 
         </Grid>
       )}
     </div>
