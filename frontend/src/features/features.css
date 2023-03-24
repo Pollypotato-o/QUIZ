@@ -1,0 +1,22 @@
+* {
+    font-family: 'birchctt';
+  }
+  
+  body {
+    font-family: 'birchctt';
+  }
+
+.second_modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+  
+  @font-face {
+    font-family: 'birchctt';
+    src: url('../../public/fonts/birchctt.ttf') format('ttf');
+    src: url('../../public/fonts/birchctt.woff') format('woff');
+  }

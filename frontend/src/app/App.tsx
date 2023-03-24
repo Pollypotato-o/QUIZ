@@ -6,6 +6,7 @@ import Registration from '../features/auth/Registration';
 import Themes from '../features/themes/Themes';
 import Layout from './Layout';
 import Page404 from './Page404';
+import './App.css';
 
 function App():JSX.Element {
   return (

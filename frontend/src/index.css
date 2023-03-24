@@ -1,25 +1,34 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'grunge',
+    sans-serif; */
+    font-family: 'birchctt';
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: aqua;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
+    font-family: 'birchctt';
 }
 
 .bg {
   width: 100%;
-  
+
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
+  background-image: linear-gradient(
+    -45deg,
+    yellow 0%,
+    yellow 25%,
+    yellow 51%,
+    #ff357f 100%
+  );
   -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
+  animation: AnimateBG 20s ease infinite;
 }
 
 @-webkit-keyframes AnimateBG {
@@ -48,11 +57,17 @@ code {
 
 .navBar {
   width: 100%;
-  
+
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
+  background-image: linear-gradient(
+    -45deg,
+    yellow 0%,
+    yellow 25%,
+    yellow 51%,
+    #ff357f 100%
+  );
   -webkit-animation: AnimateNavBar 20s ease infinite;
-          animation: AnimateNavBar 20s ease infinite;
+  animation: AnimateNavBar 20s ease infinite;
 }
 
 @-webkit-keyframes AnimateNavBar {
@@ -77,4 +92,10 @@ code {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@font-face {
+  font-family: 'birchctt';
+  src: url('../public/fonts/birchctt.ttf') format('ttf');
+  src: url('../public/fonts/birchctt.woff') format('woff');
 }
