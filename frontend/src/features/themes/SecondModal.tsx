@@ -1,41 +1,49 @@
 import { Typography, Box, Button, Modal } from '@mui/material';
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import type Question from './types/Question';
 // import OneQuestion from './OneQuestion';
-import type { RootState } from '../../store';
 import '../features.css';
 
 export default function ChildModal({
   answer,
+  check,
+  handleCheck,
 }: {
   answer: Question;
+  check: string;
+  handleCheck: () => void;
 }): JSX.Element {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = (): void => setOpen(true);
+  const handleOpen = (): void => {
+    handleCheck();
+    setOpen(true);
+  };
   const handleClose = (): void => setOpen(false);
-  // const answer = useSelector((state: RootState) => state.themesReducer)
+  console.log(check);
 
   return (
-    <div className='second_modal'>
-      <Button onClick={handleOpen}
-      sx ={{       
-        fontFamily: 'birchctt', 
-        fontSize: 36,   
-        color: '#37474f', 
-    }}
-      >Узнать ответ</Button>
+    <div className="second_modal">
+      <Button
+        onClick={handleOpen}
+        sx={{
+          fontFamily: 'birchctt',
+          fontSize: 36,
+          color: '#37474f',
+        }}
+      >
+        Узнать ответ
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx ={{       
-          fontFamily: 'birchctt',     
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+        sx={{
+          fontFamily: 'birchctt',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
       >
         <Box
           sx={{
@@ -49,7 +57,7 @@ export default function ChildModal({
           }}
         >
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {answer.answer}
+            {check}
           </Typography>
 
           <img src={`${answer.picForAnswer}`} alt="" />

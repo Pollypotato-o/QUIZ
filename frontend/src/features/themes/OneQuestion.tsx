@@ -13,10 +13,11 @@ export default function OneQuestionView({
 }): JSX.Element {
   // стэйты на модальное окно и кнопки
   const [open, setOpen] = useState(false);
-  const [disable, setDisable] = useState(false);
+  // const [disable, setDisable] = useState(false);
   // показ ответа или инпута
   const [answerShow, setAnswerShow] = useState(false);
   // строка ответа
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [answer, setAnswer] = useState('');
   // инпут для ответа
   const [inputText, setInput] = useState('');
@@ -40,6 +41,25 @@ export default function OneQuestionView({
 
   const handlerAnswer: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
+    // if (inputText.toLowerCase() === question.answer.toLowerCase()) {
+    //   dispatch<Action>({
+    //     type: 'themes/changePoints',
+    //     payload: question.points,
+    //   });
+    //   setAnswer(`Молодец! +${question.points}`);
+    // } else {
+    //   dispatch<Action>({
+    //     type: 'themes/changePoints',
+    //     payload: -question.points,
+    //   });
+    //   setAnswer(
+    //     `Блин... -${question.points}. Правильный ответ: ${question.answer}`,
+    //   );
+    // }
+    // setAnswerShow(true);
+  };
+
+  const handleCheck = ():void => {
     if (inputText.toLowerCase() === question.answer.toLowerCase()) {
       dispatch<Action>({
         type: 'themes/changePoints',
@@ -55,7 +75,6 @@ export default function OneQuestionView({
         `Блин... -${question.points}. Правильный ответ: ${question.answer}`,
       );
     }
-    setAnswerShow(true);
   };
 
   return (
@@ -118,14 +137,12 @@ export default function OneQuestionView({
               variant="h6"
               component="h2"
               sx={{
-                
                 fontFamily: 'birchctt',
                 margin: '5px 0px 10px 0px',
                 // width: '150px',
               }}
             >
               {question.question}
-              {/* <img src='{question.question_pic}' alt='x'/> */}
               <img src={`${question.question_pic}`} alt="" />
             </Typography>
             {answerShow ? (
@@ -144,7 +161,11 @@ export default function OneQuestionView({
             ) : (
               <form onSubmit={handlerAnswer}>
                 <input value={inputText} onChange={handleInputChange} />
-                <ChildModal answer={question} />
+                <ChildModal
+                  answer={question}
+                  check={answer}
+                  handleCheck={handleCheck}
+                />
                 {/* <Button
                   type="submit"
                   sx={{
