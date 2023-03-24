@@ -5,7 +5,7 @@ function Page404(): JSX.Element {
     <div>
       {' '}
       <div>Page is not found: 404</div>
-      <img src="./image/page404.mp4" alt="404" />
+      <img src="/image/page404.mp4" alt="404" />
     </div>
   );
 }
