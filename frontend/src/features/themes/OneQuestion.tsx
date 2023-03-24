@@ -69,7 +69,7 @@ export default function OneQuestionView({
         sx={{
           margin: 2,
           fontSize: 40,
-          fontFamily: 'birchctt',
+          fontFamily: 'SuperWebcomicBros',
           width: '250px',
           height: '200px',
           fontWeight: 'bold',
@@ -101,7 +101,7 @@ export default function OneQuestionView({
               left: '50%',
               transform: 'translate(-50%, -50%)',
               width: 700,
-              height: 700,
+              height: 800,
               bgcolor: 'background.paper',
               // border: '2px solid #000',
               boxShadow: 24,
@@ -110,7 +110,8 @@ export default function OneQuestionView({
               textAlign: 'center',
               color: '#37474f',
               borderRadius: '15px',
-              fontFamily: 'birchctt',
+              fontFamily: 'SuperWebcomicBros',
+              fontSize: 40,
             }}
           >
             <Typography
@@ -118,8 +119,8 @@ export default function OneQuestionView({
               variant="h6"
               component="h2"
               sx={{
-                
-                fontFamily: 'birchctt',
+                fontFamily: 'SuperWebcomicBros',
+                fontSize: 40,
                 margin: '5px 0px 10px 0px',
                 // width: '150px',
               }}
@@ -143,7 +144,14 @@ export default function OneQuestionView({
               <div>x</div>
             ) : (
               <form onSubmit={handlerAnswer}>
-                <input value={inputText} onChange={handleInputChange} />
+                <input value={inputText} onChange={handleInputChange} 
+                 style={{
+                  fontFamily: 'SuperWebcomicBros',
+                  fontSize: 36,
+                  color: '#546e7a',
+                  verticalAlign: 'middle',
+                }}
+                />
                 <ChildModal answer={question} />
                 {/* <Button
                   type="submit"

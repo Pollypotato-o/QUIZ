@@ -18,7 +18,7 @@ function Themes(): JSX.Element {
     (state: RootState) => state.themesReducer.themesList,
   );
 
-    //   const points = useSelector((state: RootState) => state.themes.score);
+  //   const points = useSelector((state: RootState) => state.themes.score);
   const user = useSelector((state: RootState) => state.userReducer.user);
 
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ function Themes(): JSX.Element {
   }, [dispatch]);
 
   return (
-    <div 
+    <div
       style={{
         marginTop: '50px',
       }}
@@ -73,7 +73,7 @@ function Themes(): JSX.Element {
                 sx={{
                   width: '300px',
                   fontSize: 50,
-                  fontFamily: 'birchctt',
+                  fontFamily: 'SuperWebcomicBros',
                   fontStyle: 'bold',
                   color: '#37474f',
                   fontWeight: 'bold',
@@ -96,9 +96,17 @@ function Themes(): JSX.Element {
             type="button"
             size="large"
             variant="outlined"
-            color="primary"
+            color="inherit"
             onClick={handleCloseGame}
-            style={{ marginBottom: '100px', marginTop: '100px' }}
+            style={{ marginBottom: '100px', marginTop: '100px', 
+            width: 400,
+            height: 100,
+            fontFamily: 'SuperWebcomicBros',
+            fontSize: 30,
+            backgroundColor: '#d4e157',
+            borderRadius: '15px',
+            color: '#37474f',
+          }}
           >
             Закончить игру
           </Button>
@@ -108,7 +116,7 @@ function Themes(): JSX.Element {
           container
           alignItems="stretch"
           justifyContent="center"
-          sx={{ backgroundColor: '#282828', fontSize: '60px', color: 'white' }}
+          sx={{ backgroundColor: '#282828', fontSize: '60px', color: '#37474f' }}
         >
           {' '}
           Войдите или зарегистрируйтесь!
