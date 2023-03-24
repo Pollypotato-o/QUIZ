@@ -51,11 +51,11 @@ const handlerRegistration = (): void => {
           <img src='/beav.png' alt='x' style={{ width: '60px', height: '60px', marginRight: '15px' }}/>
             <Typography variant="h6" component="div" sx={{ flexGrow: 2,  }}>
               
-              <Link style={{ color: 'white', fontSize: 56, textShadow: '3px 3px 3px gray', textDecorationLine: 'none', letterSpacing: '5px', fontFamily: 'SuperWebcomicBros', }} to="/">
+              <Link style={{ color: '#37474f', fontSize: 56, textShadow: '3px 3px 3px gray', textDecorationLine: 'none', letterSpacing: '5px', fontFamily: 'SuperWebcomicBros', }} to="/">
                 Quiz
               </Link>
               {user ? 
-              <span style={{ marginLeft: '50px', fontFamily: 'SuperWebcomicBros', fontSize: '30px'}}>
+              <span style={{ marginLeft: '50px', fontFamily: 'SuperWebcomicBros', fontSize: '30px', color: '#37474f',}}>
                 Привет, {user.name}
               </span>
               :
@@ -63,7 +63,7 @@ const handlerRegistration = (): void => {
               }
             </Typography>
 
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: 24, fontFamily: 'SuperWebcomicBros', fontWeight: 'bold', }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: 24, color: '#37474f', fontFamily: 'SuperWebcomicBros', fontWeight: 'bold', }}>
 
                 {user && `Ваш счёт: ${score}`}
                 {user && <Link style={{ color: 'yellow', margin: 20, fontSize: 18, fontFamily: 'SuperWebcomicBros', fontWeight: 'bold', textDecorationLine: 'none', letterSpacing: '2px'}} to="/static">
@@ -71,14 +71,14 @@ const handlerRegistration = (): void => {
               </Link>}
               </Typography>
               {user ? 
-              <Button color="inherit" onClick={handlerLogout} sx={{ fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
+              <Button color="inherit" onClick={handlerLogout} sx={{ color: '#37474f', fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
               Выйти
              </Button> :
              <>
-             <Button color="inherit" onClick={handlerLogin} sx={{ fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
+             <Button color="inherit" onClick={handlerLogin} sx={{ color: '#37474f', fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
               Войти
              </Button>
-             <Button color="inherit" onClick={handlerRegistration} sx={{ fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
+             <Button color="inherit" onClick={handlerRegistration} sx={{ color: '#37474f', fontSize: 30, fontFamily: 'SuperWebcomicBros', textShadow: '2px 2px 2px gray', letterSpacing: '2px' }}>
               Регистрация
              </Button>
             </>
