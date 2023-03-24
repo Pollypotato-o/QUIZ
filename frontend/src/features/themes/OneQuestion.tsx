@@ -4,9 +4,7 @@ import { useDispatch } from 'react-redux';
 import type Action from './types/Action';
 import type Question from './types/Question';
 import ChildModal from './SecondModal';
-
-
-
+import '../features.css';
 
 export default function OneQuestionView({
   question,
@@ -71,6 +69,7 @@ export default function OneQuestionView({
         sx={{
           margin: 2,
           fontSize: 40,
+          fontFamily: 'birchctt',
           width: '250px',
           height: '200px',
           fontWeight: 'bold',
@@ -78,7 +77,6 @@ export default function OneQuestionView({
           border: '5px #616161 solid',
           borderRadius: '20px',
           boxShadow: '1px 1px 10px 5px #616161',
-          
         }}
       >
         {question.points}
@@ -103,7 +101,7 @@ export default function OneQuestionView({
               left: '50%',
               transform: 'translate(-50%, -50%)',
               width: 700,
-              height: 400,
+              height: 700,
               bgcolor: 'background.paper',
               // border: '2px solid #000',
               boxShadow: 24,
@@ -112,6 +110,7 @@ export default function OneQuestionView({
               textAlign: 'center',
               color: '#37474f',
               borderRadius: '15px',
+              fontFamily: 'birchctt',
             }}
           >
             <Typography
@@ -119,15 +118,15 @@ export default function OneQuestionView({
               variant="h6"
               component="h2"
               sx={{
-                fontSize: 36,
-                // fontFamily: 'Szlichta',
+                
+                fontFamily: 'birchctt',
                 margin: '5px 0px 10px 0px',
                 // width: '150px',
               }}
             >
               {question.question}
               {/* <img src='{question.question_pic}' alt='x'/> */}
-                 <img src={`${question.question_pic}`} alt=''/>
+              <img src={`${question.question_pic}`} alt="" />
             </Typography>
             {answerShow ? (
               // <Typography
@@ -142,11 +141,10 @@ export default function OneQuestionView({
               //   {answer}
               // </Typography>
               <div>x</div>
-
             ) : (
               <form onSubmit={handlerAnswer}>
                 <input value={inputText} onChange={handleInputChange} />
-                <ChildModal  answer={question} />
+                <ChildModal answer={question} />
                 {/* <Button
                   type="submit"
                   sx={{
@@ -164,7 +162,6 @@ export default function OneQuestionView({
                 </Button> */}
               </form>
             )}
-             
           </Box>
         </Modal>
       </div>

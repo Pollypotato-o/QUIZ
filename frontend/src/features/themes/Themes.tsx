@@ -9,6 +9,7 @@ import * as themesApi from './api';
 import * as userApi from '../auth/api';
 import type Theme from './types/Theme';
 import type Question from './types/Question';
+import '../features.css';
 
 // import * as pointsApi from '../static/apiStatic';
 
@@ -72,7 +73,7 @@ function Themes(): JSX.Element {
                 sx={{
                   width: '300px',
                   fontSize: 50,
-                  fontFamily: 'Szlichta',
+                  fontFamily: 'birchctt',
                   fontStyle: 'bold',
                   color: '#37474f',
                   fontWeight: 'bold',
