@@ -24,7 +24,6 @@ export default function OneQuestionView({
   const handleOpen = (): void => setOpen(true);
   const handleClose = (): void => {
     setOpen(false);
-    // setDisable(true);
     dispatch<Action>({
       type: 'themes/changeQuestion',
       payload: { id: Number(question.id), themeId: Number(question.theme_id) },
@@ -62,17 +61,20 @@ export default function OneQuestionView({
       <Button
         variant="outlined"
         onClick={handleOpen}
-        // disabled={question.answered}
+        disabled={question.answered}
         // disabled={true}
         color="inherit"
         sx={{
+          margin: 2,
           fontSize: 40,
-          width: '200px',
-          height: '150px',
+          width: '250px',
+          height: '200px',
           fontWeight: 'bold',
           letterSpacing: '2px',
-          border: '3px #616161 solid',
-          borderRadius: '15px',
+          border: '5px #616161 solid',
+          borderRadius: '20px',
+          boxShadow: '1px 1px 10px 5px #616161',
+          
         }}
       >
         {question.points}
