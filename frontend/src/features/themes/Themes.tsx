@@ -43,6 +43,7 @@ function Themes(): JSX.Element {
     <div 
       style={{
         marginTop: '50px',
+        height: '',
       }}
     >
       {user ? (
@@ -107,7 +108,7 @@ function Themes(): JSX.Element {
           container
           alignItems="stretch"
           justifyContent="center"
-          sx={{ backgroundColor: '#282828', fontSize: '60px', color: 'white' }}
+          sx={{backgroundColor: 'transparent'  ,fontSize: '60px', color: '#37474f' }}
         >
           {' '}
           Войдите или зарегистрируйтесь!

@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aqua;
 }
 
 code {
@@ -14,12 +13,17 @@ code {
 }
 
 .bg {
-  width: 100%;
-  
+  height: 100vh;
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
-  -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
+  background-image: linear-gradient(
+    -90deg,
+    yellow 0%,
+    yellow 25%,
+    yellow 51%,
+    #ef5305 100%
+  );
+  -webkit-animation: AnimateBG 10s ease infinite;
+  animation: AnimateBG 10s ease infinite;
 }
 
 @-webkit-keyframes AnimateBG {
@@ -48,11 +52,17 @@ code {
 
 .navBar {
   width: 100%;
-  
+
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
+  background-image: linear-gradient(
+    -90deg,
+    yellow 100%,
+    yellow 51%,
+    yellow 25%,
+    #ef5305 0%
+  );
   -webkit-animation: AnimateNavBar 20s ease infinite;
-          animation: AnimateNavBar 20s ease infinite;
+  animation: AnimateNavBar 20s ease infinite;
 }
 
 @-webkit-keyframes AnimateNavBar {
