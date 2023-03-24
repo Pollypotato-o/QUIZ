@@ -9,6 +9,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../store';
 import * as api from '../features/auth/api';
+import '../index.css'
 
 
 function Layout(): JSX.Element {
@@ -41,13 +42,13 @@ const handlerRegistration = (): void => {
 
 
   return (
-    <div>
+    <div className='bg'>
 
       <Box sx={{ flexGrow: 1, justifyContent: 'space-between' }}>
-        <AppBar position="static" sx={{ flexGrow: 1, backgroundColor: 'black',}}>
+        <AppBar position="static" className='navBar' sx={{ flexGrow: 1}}>
             {/* backgroundColor: '#8e24aa', height: '100px', }}> */}
           <Toolbar sx={{height: '100px',}}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 2 }}>
               <Link style={{ color: 'white', fontSize: 50, textShadow: '3px 3px 3px gray', textDecorationLine: 'none', letterSpacing: '5px',  }} to="/">
                 Quiz
               </Link>

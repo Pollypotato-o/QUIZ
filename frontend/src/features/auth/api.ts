@@ -28,5 +28,5 @@ export const logout = async ():Promise<Message> => {
 
  export const verification = async ():Promise<User | Message> => {
     const res = await fetch('/api/auth/verification');
-     return res.json();
+    return res.json();
  };

@@ -20,13 +20,13 @@ function reducer(state: State = initialState, action: Action): State {
       return { ...state, score: Number(state.score) + Number(action.payload) };
 
     case 'themes/changeQuestion':
-      return {
+        return {
         ...state,
         themesList: state.themesList.map((t) => {
           if (Number(t.id) === action.payload.themeId) {
             return {
               ...t,
-              questions: t.Questions.map((q) => {
+              Questions: t.Questions.map((q) => {
                 if (q.id === action.payload.id) {
                   return { ...q, answered: true };
                 }
