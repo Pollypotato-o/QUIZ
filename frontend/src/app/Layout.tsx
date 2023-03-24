@@ -44,7 +44,7 @@ const handlerRegistration = (): void => {
     <div>
 
       <Box sx={{ flexGrow: 1, justifyContent: 'space-between' }}>
-        <AppBar position="static" sx={{ flexGrow: 1, backgroundColor: '#8e24aa',}}>
+        <AppBar position="static" sx={{ flexGrow: 1, backgroundColor: 'black',}}>
             {/* backgroundColor: '#8e24aa', height: '100px', }}> */}
           <Toolbar sx={{height: '100px',}}>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

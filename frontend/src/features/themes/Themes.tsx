@@ -3,15 +3,20 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Grid, Typography, Button } from '@mui/material';
+import { lime } from '@mui/material/colors'
 import OneQuestionView from './OneQuestion';
 import type { RootState } from '../../store';
 import * as themesApi from './api';
 import type Theme from './types/Theme';
 import type Question from './types/Question';
+
+
 // import * as pointsApi from '../static/apiStatic';
 
 function Themes(): JSX.Element {
   const themes = useSelector((state: RootState) => state.themesReducer.themesList);
+
+  const primary = lime[500]
 //   const points = useSelector((state: RootState) => state.themes.score);
     const user = useSelector((state: RootState) => state.userReducer.user);
 
@@ -68,7 +73,7 @@ function Themes(): JSX.Element {
                 fontSize: 48,
                 fontFamily: 'Szlichta',
                 fontStyle: 'bold',
-                color: 'violet',
+                color: '#37474f',
                 fontWeight: 'bold',
                 textAlign: 'center',
                 verticalAlign: 'center',
@@ -89,7 +94,7 @@ function Themes(): JSX.Element {
         type="button"
         size="large"
         variant="outlined"
-        color="secondary"
+        color="primary"    
         onClick={handleCloseGame}
         style={{ marginBottom: '100px' , marginTop: '100px'}}
       >

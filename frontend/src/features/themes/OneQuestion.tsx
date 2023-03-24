@@ -62,16 +62,17 @@ export default function OneQuestionView({
       <Button
         variant="outlined"
         onClick={handleOpen}
-        disabled={question.answered}
-        color="secondary"
+        // disabled={question.answered}
+        // disabled={true}
+        color="inherit"
         sx={{
           fontSize: 40,
-          fontFamily: 'Szlichta',
-          width: '150px',
+          width: '200px',
           height: '150px',
           fontWeight: 'bold',
           letterSpacing: '2px',
-          border: '3px #9c27b0 solid',
+          border: '3px #616161 solid',
+          borderRadius: '15px',
         }}
       >
         {question.points}
@@ -101,9 +102,10 @@ export default function OneQuestionView({
               // border: '2px solid #000',
               boxShadow: 24,
               p: 4,
-              backgroundColor: '#9c27b0',
+              backgroundColor: '#c0ca33',
               textAlign: 'center',
-              color: 'white',
+              color: '#37474f',
+              borderRadius: '15px',
             }}
           >
             <Typography
@@ -112,7 +114,7 @@ export default function OneQuestionView({
               component="h2"
               sx={{
                 fontSize: 36,
-                fontFamily: 'Szlichta',
+                // fontFamily: 'Szlichta',
                 margin: '5px 0px 10px 0px',
                 // width: '150px',
               }}
@@ -125,8 +127,8 @@ export default function OneQuestionView({
                 sx={{
                   mt: 2,
                   fontSize: 30,
-                  fontFamily: 'Szlichta',
-                  color: 'yellow',
+                  // fontFamily: 'Szlichta',
+                  color: '#37474f',
                 }}
               >
                 {answer}
@@ -139,8 +141,8 @@ export default function OneQuestionView({
                   sx={{
                     mt: 2,
                     fontSize: 22,
-                    fontFamily: 'Szlichta',
-                    color: 'yellow',
+                    // fontFamily: 'Szlichta',
+                    color: '#37474f',
                     fontWeight: 'bold',
                     letterSpacing: '2px',
                     // margin: '10px 0px 5px 5px',
