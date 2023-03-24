@@ -1,0 +1,51 @@
+* {
+  font-family: 'SuperWebcomicBros';
+}
+
+body {
+  font-family: 'SuperWebcomicBros';
+}
+
+/* .answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+} */
+
+.formReg_container{
+  font-family: 'SuperWebcomicBros';
+          font-size: 36;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+}
+
+/* .input-field{
+  width: 600px;
+  height: 50px;
+} */
+
+.input_form{
+  width: 600px;
+  height: 50px;
+  font-size: 30px;
+  color: black;
+}
+
+.button_auth{
+  width: 400px;
+  height: 60px;
+  font-size: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: rgb(196, 196, 196);
+  
+}
+
+@font-face {
+  font-family: 'SuperWebcomicBros';
+  src: url('../../public/fonts/SuperWebcomicBros.ttf') format('ttf');
+  src: url('../../public/fonts/SuperWebcomicBros.woff') format('woff');
+}

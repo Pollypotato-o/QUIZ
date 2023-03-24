@@ -1,0 +1,13 @@
+* {
+  font-family: 'SuperWebcomicBros';
+}
+
+body {
+  font-family: 'SuperWebcomicBros';
+}
+
+@font-face {
+  font-family: 'SuperWebcomicBros';
+  src: url('../../public/fonts/SuperWebcomicBros.ttf') format('ttf');
+  src: url('../../public/fonts/SuperWebcomicBros.woff') format('woff');
+}
