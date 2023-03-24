@@ -65,14 +65,14 @@ export default function OneQuestionView({
         type: 'themes/changePoints',
         payload: question.points,
       });
-      setAnswer(`Молодец! +${question.points}`);
+      setAnswer(`Красава! +${question.points}`);
     } else {
       dispatch<Action>({
         type: 'themes/changePoints',
         payload: -question.points,
       });
       setAnswer(
-        `Блин... -${question.points}. Правильный ответ: ${question.answer}`,
+        `Лох - это судьба :( -${question.points}. Правильно: ${question.answer}`,
       );
     }
   };
