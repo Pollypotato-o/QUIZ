@@ -1,13 +1,15 @@
 import React from 'react';
+
 import { Route, Router, Routes } from 'react-router-dom';
 import Authorization from '../features/auth/Authorization';
 import Registration from '../features/auth/Registration';
 import Themes from '../features/themes/Themes';
-import './App.css';
-import Layout from './Layout';
 
-function App(): JSX.Element {
+import './App.css';
+
+function App() {
   return (
+
     <Routes>
       <Route element={<Layout />}>
         <Route path="/login" element={<Authorization/>} />
