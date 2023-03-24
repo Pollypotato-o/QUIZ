@@ -25,7 +25,7 @@ function Registration():JSX.Element {
 
   return (
     <div>
-    <form className="formReg container " onSubmit={handleReg}>
+    <form className="formReg_container " onSubmit={handleReg}>
     <div className="input-field">
     <input placeholder="name" className="input_form" name="name" onChange={(e) => setName(e.target.value)} value={name} />
     </div>

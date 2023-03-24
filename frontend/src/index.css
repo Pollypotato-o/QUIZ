@@ -1,15 +1,22 @@
+*{
+  font-family: 'SuperWebcomicBros';
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'grunge',
+    sans-serif; */
+  font-family: 'SuperWebcomicBros';
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
+  font-family: 'SuperWebcomicBros';
 }
 
 .bg {
@@ -53,6 +60,7 @@ code {
 .navBar {
   width: 100%;
 
+
   background-size: 300% 300%;
   background-image: linear-gradient(
     -90deg,
@@ -62,6 +70,7 @@ code {
     #ef5305 0%
   );
   -webkit-animation: AnimateNavBar 20s ease infinite;
+  animation: AnimateNavBar 20s ease infinite;
   animation: AnimateNavBar 20s ease infinite;
 }
 
@@ -87,4 +96,10 @@ code {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@font-face {
+  font-family: 'SuperWebcomicBros';
+  src: url('../public/fonts/SuperWebcomicBros.ttf') format('ttf');
+  src: url('../public/fonts/SuperWebcomicBros.woff') format('woff');
 }
