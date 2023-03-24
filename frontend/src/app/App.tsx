@@ -6,6 +6,7 @@ import Registration from '../features/auth/Registration';
 import Themes from '../features/themes/Themes';
 
 import './App.css';
+import Page404 from './Page404';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Themes />} />
          {/* <Route path="/static" element={<Static />}/> */}
         <Route path="/registration" element={<Registration />}/>
+        <Route path="*" element={<Page404 />}/>
       </Route>
    </Routes>
 
