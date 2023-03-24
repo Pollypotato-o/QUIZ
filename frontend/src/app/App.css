@@ -1,15 +1,13 @@
 * {
-  font-family: 'birchctt';
+  font-family: 'SuperWebcomicBros';
 }
 
 body {
-  font-family: 'birchctt';
+  font-family: 'SuperWebcomicBros';
 }
 
-
-
 @font-face {
-  font-family: 'birchctt';
-  src: url('../../public/fonts/birchctt.ttf') format('ttf');
-  src: url('../../public/fonts/birchctt.woff') format('woff');
+  font-family: 'SuperWebcomicBros';
+  src: url('../../public/fonts/SuperWebcomicBros.ttf') format('ttf');
+  src: url('../../public/fonts/SuperWebcomicBros.woff') format('woff');
 }

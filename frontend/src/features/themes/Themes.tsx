@@ -18,7 +18,7 @@ function Themes(): JSX.Element {
     (state: RootState) => state.themesReducer.themesList,
   );
 
-    //   const points = useSelector((state: RootState) => state.themes.score);
+  //   const points = useSelector((state: RootState) => state.themes.score);
   const user = useSelector((state: RootState) => state.userReducer.user);
 
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ function Themes(): JSX.Element {
   }, [dispatch]);
 
   return (
-    <div 
+    <div
       style={{
         marginTop: '50px',
       }}
@@ -73,7 +73,7 @@ function Themes(): JSX.Element {
                 sx={{
                   width: '300px',
                   fontSize: 50,
-                  fontFamily: 'birchctt',
+                  fontFamily: 'SuperWebcomicBros',
                   fontStyle: 'bold',
                   color: '#37474f',
                   fontWeight: 'bold',

@@ -24,7 +24,7 @@ function Authorization():JSX.Element {
 
   return (
     <div>
-    <form className="formReg container " onSubmit={handleLog}>
+    <form className="formReg_container " onSubmit={handleLog}>
 
         <div className="input-field">
         <input placeholder="email" className="input_form" name="email" onChange={(e) => setEmail(e.target.value)} value={email} />
