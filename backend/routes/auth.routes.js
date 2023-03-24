@@ -69,7 +69,7 @@ router.post('/logout', (req, res) => {
       return res.status(500).json({ message: 'Ошибка при удалении сессии' });
     }
     res.clearCookie('user_sid');
-    res.json({ success: true });
+    res.json({ message: true });
   });
 });
 

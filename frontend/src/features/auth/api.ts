@@ -1,7 +1,7 @@
-import { Message, User } from './types/types';
+import type { Message, User } from './types/types';
 
 export const registration = async (obj:User):Promise<User | Message> => {
-    const res = await fetch('http://localhost:4000/api/auth/sign_up', {
+    const res = await fetch('/api/auth/sign_up', {
          method: 'POST',
          credentials: 'include',
          headers: { 'Content-Type': 'application/json' },
@@ -10,25 +10,23 @@ export const registration = async (obj:User):Promise<User | Message> => {
      return res.json();
  };
 
- export const authorization = async (obj:User):Promise<User | Message> => {
-    const res = await fetch('http://localhost:4000/api/auth/sign_in', {
+ export const authorization = async ({email, password}: {email: string, password: string}):Promise<User | Message> => {
+    const res = await fetch('/api/auth/sign_in', {
          method: 'POST',
          headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify(obj)
+         body: JSON.stringify({email, password})
      });
      return res.json();
     };
 
-export const logout = async (obj:User):Promise<User | Message> => {
-    const res = await fetch('http://localhost:4000/api/auth/logout', {
+export const logout = async ():Promise<Message> => {
+    const res = await fetch('/api/auth/logout', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(obj)
     });
     return res.json();
    };
 
  export const verification = async ():Promise<User | Message> => {
-    const res = await fetch('http://localhost:4000/api/auth/verification', { credentials: 'include', });
+    const res = await fetch('/api/auth/verification');
      return res.json();
  };
