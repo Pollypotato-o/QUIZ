@@ -44,8 +44,8 @@ const handlerRegistration = (): void => {
   return (
     <div className='bg'>
 
-      <Box sx={{ flexGrow: 1, justifyContent: 'space-between' }}>
-        <AppBar position="static" className='navBar' sx={{ flexGrow: 1}}>
+      <Box sx={{ flexGrow: 2, justifyContent: 'space-between' }}>
+        <AppBar position="static" className='navBar' sx={{backgroundColor: 'transparent', flexGrow: 1}}>
             {/* backgroundColor: '#8e24aa', height: '100px', }}> */}
           <Toolbar sx={{height: '100px',}}>
           <img src='/beav.png' alt='x' style={{ width: '60px', height: '60px', marginRight: '15px' }}/>
