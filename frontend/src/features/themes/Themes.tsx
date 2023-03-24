@@ -7,6 +7,7 @@ import { lime } from '@mui/material/colors'
 import OneQuestionView from './OneQuestion';
 import type { RootState } from '../../store';
 import * as themesApi from './api';
+import * as userApi from '../auth/api'
 import type Theme from './types/Theme';
 import type Question from './types/Question';
 
@@ -35,6 +36,10 @@ function Themes(): JSX.Element {
     themesApi.loadThemes().then((data) => {
       dispatch({ type: 'themes/loadThemes', payload: data });
     });
+    userApi.verification().then((data) => {
+      dispatch({ type: 'VERIFICATION', payload: data })
+    })
+
   }, [dispatch]);
 
   return (
