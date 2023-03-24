@@ -26,9 +26,11 @@ export default function ChildModal({
       <Button
         onClick={handleOpen}
         sx={{
-          fontFamily: 'birchctt',
+
+          fontFamily: 'SuperWebcomicBros',
           fontSize: 36,
           color: '#37474f',
+          verticalAlign: 'middle',
         }}
       >
         Узнать ответ
@@ -39,29 +41,50 @@ export default function ChildModal({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         sx={{
-          fontFamily: 'birchctt',
+          fontFamily: 'SuperWebcomicBros',
+          fontSize: 36,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          verticalAlign: 'middle',
+
         }}
       >
         <Box
           sx={{
             width: 700,
-            height: 400,
-            fontFamily: 'birchctt',
+            height: 600,
+            fontFamily: 'SuperWebcomicBros',
+            fontSize: 36,
             backgroundColor: '#d4e157',
             borderRadius: '15px',
             color: '#37474f',
             textAlign: 'center',
+            verticalAlign: 'middle',
+            padding: '20px',
+            display: 'flex',
+            alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
           }}
         >
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {check}
-          </Typography>
 
+          <Typography id="modal-modal-title" variant="h6" component="h2" 
+            sx={{
+              fontFamily: 'SuperWebcomicBros',
+              fontSize: 30,
+              color: '#37474f',
+              textAlign: 'center',
+              verticalAlign: 'middle',
+            }}
+          >
+            {check}
+
+          </Typography>
+<div className='answer'>
           <img src={`${answer.picForAnswer}`} alt="" />
-          <div>{answer.infoForAnswer}</div>
+          <div className='infoForAnswer'>{answer.infoForAnswer}</div>
+          </div>
           {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
             </Typography> */}
