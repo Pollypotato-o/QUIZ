@@ -21,6 +21,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      question_pic: {
+        type: Sequelize.TEXT
+      },
       answer: {
         allowNull: false,
         type: Sequelize.TEXT
@@ -28,6 +31,9 @@ module.exports = {
       points: {
         allowNull: false,
         type: Sequelize.INTEGER
+      },
+      picForAnswer: {
+        type: Sequelize.TEXT
       },
       infoForAnswer: {
         type: Sequelize.TEXT

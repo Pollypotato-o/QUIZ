@@ -26,6 +26,9 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.TEXT
     },
+    question_pic: {
+      type: DataTypes.TEXT
+    },
     answer: {
       allowNull: false,
       type: DataTypes.TEXT
@@ -33,6 +36,9 @@ module.exports = (sequelize, DataTypes) => {
     points: {
       allowNull: false,
       type: DataTypes.INTEGER
+    },
+    picForAnswer: {
+      type: DataTypes.TEXT
     },
     infoForAnswer: {
       type: DataTypes.TEXT
